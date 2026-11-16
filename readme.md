@@ -11,5 +11,7 @@ The website includes amenities, information about personal trainers and nutritio
 
 ## Live Website
 
+https://ozarktechdev.com/alex/fit-for-fitness/
+
 ## Screenshot of Homepage
 ![homepage screenshot](images/homepage-screenshot.png)
