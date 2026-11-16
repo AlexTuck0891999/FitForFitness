@@ -1,0 +1,389 @@
+/* =========================================
+   COLOR PALATTE
+   ========================================= */
+
+:root {
+  --gold: #f6bd60;
+  --cream: #f7ede2;
+  --pink: #f5cac3;
+  --teal: #84a59d;
+  --coral: #f28482;
+  --ink: #203630;
+}
+
+/* =========================================
+   GENERAL PAGE STYLES
+   ========================================= */
+
+body {
+  margin: 0;
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.9rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+a {
+  color: var(--ink);
+  text-underline-offset: 0.2em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  scroll-margin-top: 1rem;
+}
+
+/* =========================================
+   KEYBOARD ACCESSIBILITY
+   ========================================= */
+
+.skip-link {
+  position: absolute;
+  top: -6rem;
+  left: 1rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+  z-index: 10;
+  padding: 1rem;
+  background-color: white;
+  color: var(--ink);
+}
+
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   HEADER AND LOGO
+   ========================================= */
+
+.site-header {
+  background-color: var(--cream);
+  border-bottom: 1px solid var(--teal);
+}
+
+.brand {
+  display: inline-block;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================
+   FLEXBOX NAV - mobile first default
+   ========================================= */
+
+.site-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0.4rem;
+  padding-bottom: 1rem;
+}
+
+/* The anchors are direct flex children. */
+.site-nav a {
+  flex: 0 1 auto;
+  padding: 0.65rem 1rem;
+  border-radius: 0.4rem;
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  background-color: var(--pink);
+}
+
+/* =========================================
+   HOME PAGE INTRODUCTION
+   ========================================= */
+
+.hero {
+  padding: 2.5rem 0;
+}
+
+.hero-text {
+  min-width: 0;
+}
+
+.section-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.heading-accent {
+  text-decoration: underline;
+  text-decoration-color: var(--coral);
+  text-underline-offset: 0.15em;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-image {
+  min-width: 0;
+  margin-top: 2rem;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.text-link {
+  font-weight: 700;
+}
+
+/* bootstrap supplies .btn */
+.button-gold {
+  background-color: var(--gold);
+  border: 2px solid var(--ink);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.button-gold:hover,
+.button-gold:focus-visible {
+  background-color: var(--coral);
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.welcome-message {
+  background-color: var(--teal);
+}
+
+/* =========================================
+   AMENITIES
+   ========================================= */
+
+.content-section {
+  padding: 3rem 0;
+}
+
+.section-introduction {
+  max-width: 45rem;
+}
+
+.amenities-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.amenity {
+  flex: 1;
+  min-width: 0;
+  padding-top: 1rem;
+  border-top: 4px solid var(--coral);
+}
+
+.amenity:nth-child(2) {
+  border-top-color: var(--teal);
+}
+
+.amenity:nth-child(3) {
+  border-top-color: var(--gold);
+}
+
+.amenity ul {
+  padding-left: 1.2rem;
+}
+
+.amenity li {
+  margin-bottom: 0.5rem;
+}
+
+/* =========================================
+   BOOTSTRAP CARD
+   ========================================= */
+
+.support-layout {
+  border-top: 1px solid var(--teal);
+  border-bottom: 1px solid var(--teal);
+}
+
+.support-text {
+  min-width: 0;
+  margin-bottom: 2rem;
+}
+
+.welcome-card {
+  min-width: 0;
+  background-color: white;
+  color: var(--ink);
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.card-title {
+  font-size: 1.6rem;
+}
+
+/* Keep the required Bootstrap success button green. */
+.btn-success {
+  --bs-btn-bg: #146c43;
+  --bs-btn-border-color: #146c43;
+}
+
+/* =========================================
+   CLASS SCHEDULE
+   ========================================= */
+
+.table {
+  --bs-table-color: var(--ink);
+  --bs-table-bg: #ffffff;
+  --bs-table-striped-bg: #f7ede2;
+  --bs-table-hover-bg: #f5cac3;
+  min-width: 680px;
+}
+
+.table thead th {
+  background-color: var(--teal);
+  color: var(--ink);
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+}
+
+caption {
+  caption-side: top;
+  color: var(--ink);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.closing-message {
+  background-color: var(--pink);
+  border-left: 6px solid var(--coral);
+}
+
+.site-footer {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--teal);
+}
+
+/* =========================================
+   CONTACT PAGE
+   ========================================= */
+
+.contact-main {
+  min-height: 55vh;
+  padding-top: 3rem;
+}
+
+.contact-message {
+  max-width: 45rem;
+}
+
+/* =========================================
+   MEDIA QUERY - 768 pixels and wider
+   ========================================= */
+
+@media (min-width: 768px) {
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .site-nav {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 0;
+  }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem 0;
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  .hero-image {
+    flex: 1;
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .amenities-layout {
+    flex-direction: row;
+  }
+
+  .support-layout {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .support-text {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  .welcome-card {
+    flex: 1;
+  }
+}
